@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+  	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+
+      .media ul {
+    	position: absolute;
+    	top: 60%;
+    	left: 50%;
+    	transform: translate(-53%, -50%);
+    	display: flex;
+    	}
+
+       .media ul li{
+       	list-style: none;
+    	font-size: 40px;
+    	margin: 0 15px;
+       }	
+
+       .media p {
+       	position: absolute;
+    	top: 65%;
+    	display: flex;
+    	left: 43%;
+       }		
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+      <h3>Calculator App</h3>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="Number One">First Number</label>
+        <input
+          type="text"
+          placeholder="First Number"
+          class="u-full-width"
+          name="num1"
+        />
+
+        <label for="Number Two">Second Number</label>
+        <input
+          type="text"
+          placeholder="Second Number"
+          class="u-full-width"
+          name="num2"
+        />
+
+        <label for="Operation">Operation</label>
+        <select class="u-full-width" name="operation">
+          <option value="add">Add</option>
+          <option value="subtract">Subtract</option>
+          <option value="multiply">Multiply</option>
+          <option value="divide">Divide</option>
+        </select>
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ sum }}
+        </div>
+      </form>
+    </div>
+
+
+
+     <div class="media">
+     	<ul>
+     		<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+     		<li><a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+     		<li><a href="https://twitter.com/login?lang=en" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+     	</ul>
+     	<p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+     </div>
+ 
+
+  
+</body>
+
+</html>
